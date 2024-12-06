@@ -256,8 +256,11 @@ function insertOptionsToSelect(select, from, to) {
         insertIntoSelect(select, i + 1);
     }
 }
-
-
+/*
+function insertIntoSelect() insert the options  we want to the select se want
+param select: the select we insert to it the options
+param elem: the element we insert to the select
+*/
 function insertIntoSelect(select, elem) {
     var option = document.createElement('option');
     var text1 = elem;
