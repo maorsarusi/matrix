@@ -245,7 +245,12 @@ function otherRank() {
         return true;
     }
 }
-
+/*
+function insertOptionsToSelect() insert the options (numbers) we want to the select se want
+param select: the select we insert to it the options
+param from: the number we start to insert to the select
+param to: the number we finish to insert to the select
+*/
 function insertOptionsToSelect(select, from, to) {
     for (let i = from; i <= to; i++) {
         insertIntoSelect(select, i + 1);
