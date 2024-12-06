@@ -246,7 +246,7 @@ function otherRank() {
     }
 }
 /*
-function insertOptionsToSelect() insert the options (numbers) we want to the select se want
+function insertOptionsToSelect() insert the options (numbers) we want to the select we want
 param select: the select we insert to it the options
 param from: the number we start to insert to the select
 param to: the number we finish to insert to the select
@@ -257,7 +257,7 @@ function insertOptionsToSelect(select, from, to) {
     }
 }
 /*
-function insertIntoSelect() insert the options  we want to the select se want
+function insertIntoSelect() insert the options  we want to the select we want
 param select: the select we insert to it the options
 param elem: the element we insert to the select
 */
@@ -269,6 +269,10 @@ function insertIntoSelect(select, elem) {
     select.add(option);
 }
 
+/*
+function createMatrix() gets the parametrs of rows and columns and create a matrix by it
+param color: the color of the border in the matrix - the border represents the answer section in the matrix
+*/
 function createMatrix(color) {
     ROWS = parseInt(document.getElementById("indexRow").value);
     COLUMNS = parseInt(document.getElementById("indexColumns").value) + 1;
@@ -290,6 +294,10 @@ function createMatrix(color) {
     }
 }
 
+/*
+function getFormula() write the fotmula representeds by the matrix
+and return it
+*/
 function getFormula() {
     var formula = '';
     var formulaP = '';
