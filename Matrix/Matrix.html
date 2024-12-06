@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Matrix_Styles.css">
+    <title>מטריצות</title>
+</head>
+
+<body onload="insertOptionsToSelect(document.getElementById('indexRow'),1, 10) ,insertOptionsToSelect(document.getElementById('indexColumns'),1, 10)">
+    <script src="Matrix.js"></script>
+    <script src="Fraction.js"></script>
+    <script src="SDK_Matrix.js"></script>
+    <div id="startDiv" class="container">
+        <label for="indexRow"> בחר מספר שורות</label>
+        <select id="indexRow" style="margin:5px;"></select>
+        <label for="indexColumns"> בחר מספר עמודות</label>
+        <select id="indexColumns"></select>
+        <div class="center_buttons_finish_reset">
+            <button id="submit" onclick="createMatrix('red')" style=" background-color:#007bff;  font-size: 1.5rem; color: #fff">אשר</button>
+        </div>
+    </div>
+    <div id="matrixDiv" style="display: none;">
+        <table id="Matrix" border="1">
+        </table>
+        <div class="container">
+            <div id="submitButton">
+                <button id="submit" onclick="getMatrixDetails(false)" style=" background-color:#007bff;  font-size: 1.5rem; color: #fff">הכנס ערכים ואח"כ לחץ כאן לחישוב</button>
+            </div>
+            <button id="calculate" onclick="calculateMatrixByYou()" style=" background-color:#007bff;  font-size: 1.5rem; color: #fff" disabled>חשב מטריצה</button>
+            <button id="newValues" onclick="insertNewValues()" style=" background-color:#007bff;  font-size: 1.5rem; color: #fff" disabled>הכנס ערכים מחדש</button>
+            <p id="formula">
+            </p>
+        </div>
+        <div id="byYou" class="container" style="display: none;">
+            <label for="operations">:בחר פעולה חשבונית</label>
+            <select id="operations" onchange="switchOptions()">
+                <option value="1" dir="rtl">החלף שורה</option>
+                <option value="2" dir="rtl">הכפל שורה בקבוע</option>
+                <option value="3" dir="rtl">הוסף שורה לשורה אחרת</option>
+            </select>
+
+        </div>
+        <div id="switch" class="containerRow" style="display: none;">
+            <select id="to">
+            </select>
+            <label for="to">עם שורה</label>
+            <select id="from">           
+            </select>
+            <label for="from" style="float: left;">את שורה</label>
+        </div>
+        <div id="multiply" class="container" style="display: none;">
+            <label for="rowNum">בחר שורה</label>
+            <select id="rowNum">
+            </select>
+            <input id="alpha" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="הכנס מספר" dir="rtl">
+        </div>
+        <div id="add" class="containerRow" style="display: none;">
+            <input id="alphaAdd" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="הכנס מספר" dir="rtl">
+            <select id="with">
+            </select>
+            <label for="with">לשורה</label>
+            <select id="current">           
+            </select>
+            <label for="current" style="float: left;">את שורה</label>
+        </div>
+        <div id="calculateButton" class="container" style="display: none;">
+            <button id="implementButton" onclick="manageOperations()" style=" background-color:#007bff;  font-size: 1.5rem; color: #fff">חשב פעולה</button>
+        </div>
+        <div id="operationsP" class="container" style="display: none;">
+            <p id="operationsOrder"></p>
+        </div>
+        <div id="finalResult" class="container" style="display: none;">
+            <p id="result"></p>
+        </div>
+</body>
+
+</html>

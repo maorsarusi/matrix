@@ -1,0 +1,79 @@
+.td {
+    width: 25%;
+    height: 25%;
+}
+
+.container {
+    width: 90%;
+    max-width: 500px;
+    /* Adjust maximum width as needed */
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* Center the operators div */
+
+.containerRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Adjust the CSS for #operators */
+
+#switch,
+#multiply,
+#add {
+    position: relative;
+    margin-top: 20px;
+}
+
+
+/* Center the table */
+
+#Matrix {
+    margin: 20px auto;
+}
+
+
+/* Center the button */
+
+#submit {
+    margin-top: 20px;
+}
+
+
+/* Position labels above selects */
+
+.container label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}
+
+
+/* Position calculateButton under switch and multiply */
+
+#calculateButton {
+    margin-top: 20px;
+}

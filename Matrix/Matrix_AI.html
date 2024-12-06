@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Matrix_Styles.css">
+    <title>מטריצות אוטומטי</title>
+</head>
+
+<body onload="insertOptionsToSelect(document.getElementById('indexRow'),1, 10) ,insertOptionsToSelect(document.getElementById('indexColumns'),1, 10)">
+    <script src="Fraction.js"></script>
+    <script src="SDK_Matrix.js"></script>
+    <script src="Matrix_AI.js"></script>
+    <div id="startDiv" class="container">
+        <label for="indexRow"> בחר מספר שורות</label>
+        <select id="indexRow" style="margin:5px;"></select>
+        <label for="indexColumns"> בחר מספר עמודות</label>
+        <select id="indexColumns"></select>
+        <div class="center_buttons_finish_reset">
+            <button id="submit" onclick="createMatrix('#ff33009c')" style=" background-color:#00ff2a;  font-size: 1.5rem; color: #fff">אשר</button>
+        </div>
+    </div>
+    <div id="matrixDiv" style="display: none;">
+        <table id="Matrix" border="1">
+        </table>
+        <div class="container">
+            <div id="submitButton">
+                <button id="submit" onclick="getMatrixDetails(true)" style=" background-color:#00ff2a;  font-size: 1.5rem; color: #fff">הכנס ערכים ואח"כ לחץ כאן לחישוב</button>
+            </div>
+            <button id="calculate" onclick="calculateMatrix()" style=" background-color:#00ff2a;  font-size: 1.5rem; color: #fff" disabled>חשב מטריצה</button>
+            <button id="stepByStep" onclick="stepByStep()" style=" background-color:#00ff2a;  font-size: 1.5rem; color: #fff" disabled>step by step</button>
+            <button id="newValues" onclick="insertNewValues()" style=" background-color:#00ff2a;  font-size: 1.5rem; color: #fff" disabled>הכנס ערכים מחדש</button>
+            <p id="formula">
+            </p>
+        </div>
+        <div id="operationsP" class="container" style="display: none;">
+            <p id="operationsOrder"></p>
+        </div>
+        <div id="finalResult" class="container" style="display: none;">
+            <p id="result"></p>
+        </div>
+</body>
+
+</html>
